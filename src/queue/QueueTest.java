@@ -1,3 +1,5 @@
+package queue;
+
 public class QueueTest {
     private int[] data;
     private static final int DEFAULT_SIZE = 10;

@@ -1,3 +1,5 @@
+package queue;
+
 public class DynamicQueue extends CircularQueue{
     public DynamicQueue(){
         super();

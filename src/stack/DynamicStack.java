@@ -1,10 +1,12 @@
+package stack;
+
 public class DynamicStack extends StackTest{
     public DynamicStack(){
-        super(); // it will call StackTest
+        super(); // it will call stack.StackTest
     }
 
     public DynamicStack(int size){
-        super(size); // it will call StackTest(int size)
+        super(size); // it will call stack.StackTest(int size)
     }
 
     @Override

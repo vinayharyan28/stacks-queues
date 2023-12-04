@@ -1,3 +1,5 @@
+package stack;
+
 public class StackTest {
     protected int[] data;
     private static final int DEFAULT_SIZE=10;

@@ -1,3 +1,5 @@
+package queue;
+
 public class CircularQueue {
     protected int DEFAULT_SIZE=10;
     protected int[] data;
