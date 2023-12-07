@@ -69,6 +69,30 @@ public class StackProblems {
         }
     }
 
+    static boolean validParenthesis(String string){
+        Stack<Character> stack = new Stack<>();
+        for (int i=0; i<string.length(); i++){
+            char ch = string.charAt(i);
+            //Opening
+            if (ch == '(' || ch == '{' || ch == '['){
+                stack.push(ch);
+            }else {
+                // Closing
+                if(stack.isEmpty()){
+                    return false;
+                }
+                if ((stack.peek() == '(' && ch == ')') || (stack.peek() == '{' && ch == '}') || (stack.peek() == '[' && ch == ']')){
+                    stack.pop();
+                }else {
+                    return false;
+                }
+            }
+        }
+
+        return stack.isEmpty();
+
+    }
+
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
         stack.add(1);
@@ -91,6 +115,7 @@ public class StackProblems {
         int[] span = new int[stocks.length];
         stockSpan(stocks, span);
         System.out.println(Arrays.toString(span));
+        System.out.println(validParenthesis("((((()))))"));
 
 
     }
